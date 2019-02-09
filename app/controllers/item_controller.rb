@@ -1,4 +1,0 @@
-class ItemController < ApplicationController
-
-  
-end
