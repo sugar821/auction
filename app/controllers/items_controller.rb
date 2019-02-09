@@ -18,6 +18,18 @@ class ItemsController < ApplicationController
     redirect_to @item
   end
 
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    redirect_to @item
+  end
+
+  # 先にEDITがあってこれをUPDATEする
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+
   private
   #どのカラムに対して更新許可を出すか
   # ストロングパラメータの作成
